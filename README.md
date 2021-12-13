@@ -16,3 +16,44 @@ Mode
 # +
 	Opens a file for updating (reading and writing)
 
+
+f = open("test.txt")      # equivalent to 'r' or 'rt'
+
+f = open("test.txt",'w')  # write in text mode
+
+f = open("img.bmp",'r+b') # read and write in binary mode
+
+f = open("test.txt", mode='r', encoding='utf-8')
+
+
+f = open("test.txt", encoding = 'utf-8')
+# perform file operations
+f.close()
+
+
+try:
+   f = open("test.txt", encoding = 'utf-8')
+   # perform file operations
+finally:
+   f.close()
+
+
+with open("test.txt", encoding = 'utf-8') as f:
+   # perform file operations
+
+
+with open("test.txt",'w',encoding = 'utf-8') as f:
+   f.write("my first file\n")
+   f.write("This file\n\n")
+   f.write("contains three lines\n")
+
+
+
+
+
+
+
+
+
+
+
